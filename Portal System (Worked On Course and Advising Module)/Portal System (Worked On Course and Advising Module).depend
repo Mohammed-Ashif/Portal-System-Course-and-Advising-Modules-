@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1717829770 source:e:\codeblocks\c\assignments\portal system (worked on course and advising module)\course.c
+	"course.h"
+
+1717829773 e:\codeblocks\c\assignments\portal system (worked on course and advising module)\course.h
+	"utils.h"
+
+1717829773 e:\codeblocks\c\assignments\portal system (worked on course and advising module)\utils.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<stdbool.h>
+	<stdint.h>
+
+1717829788 source:e:\codeblocks\c\assignments\portal system (worked on course and advising module)\advising.c
+	"advising.h"
+
+1717829773 e:\codeblocks\c\assignments\portal system (worked on course and advising module)\advising.h
+	"utils.h"
+	"course.h"
+
+1717832274 source:c:\users\asifi\onedrive\desktop\portal system (worked on course and advising module)\advising.c
+	"advising.h"
+
+1717831459 c:\users\asifi\onedrive\desktop\portal system (worked on course and advising module)\advising.h
+	"utils.h"
+	"course.h"
+
+1717829773 c:\users\asifi\onedrive\desktop\portal system (worked on course and advising module)\utils.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<stdbool.h>
+	<stdint.h>
+
+1717834694 c:\users\asifi\onedrive\desktop\portal system (worked on course and advising module)\course.h
+	"utils.h"
+
+1717834694 source:c:\users\asifi\onedrive\desktop\portal system (worked on course and advising module)\course.c
+	"course.h"
+
+1717834255 source:c:\users\asifi\onedrive\desktop\portal system (worked on course and advising module)\main.c
+	"advising.h"
+
