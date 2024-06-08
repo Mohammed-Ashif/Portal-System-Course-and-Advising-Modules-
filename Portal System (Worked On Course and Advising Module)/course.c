@@ -1,7 +1,8 @@
 #include "course.h"
 
 // Function to create a new course
-Course* createCourse(const char* code, const char* title, int credits) {
+Course* createCourse(const char* code, const char* title, int credits)
+{
     Course* newCourse = (Course*)malloc(sizeof(Course));
     newCourse->courseCode = (char*)malloc((strlen(code) + 1) * sizeof(char));
     newCourse->courseTitle = (char*)malloc((strlen(title) + 1) * sizeof(char));
@@ -12,7 +13,8 @@ Course* createCourse(const char* code, const char* title, int credits) {
 }
 
 // Function to create a new node
-Node* createNode(Course* course) {
+Node* createNode(Course* course)
+{
     Node* newNode = (Node*)malloc(sizeof(Node));
     newNode->course = course;
     newNode->next = NULL;
@@ -20,13 +22,18 @@ Node* createNode(Course* course) {
 }
 
 // Function to add a course to a list
-void addCourse(Node** head, Course* course) {
+void addCourse(Node** head, Course* course)
+{
     Node* newNode = createNode(course);
-    if (*head == NULL) {
+    if (*head == NULL)
+    {
         *head = newNode;
-    } else {
+    }
+    else
+    {
         Node* temp = *head;
-        while (temp->next != NULL) {
+        while (temp->next != NULL)
+        {
             temp = temp->next;
         }
         temp->next = newNode;
@@ -34,14 +41,17 @@ void addCourse(Node** head, Course* course) {
 }
 
 // Function to display courses
-void displayCourses(Node* head) {
+void displayCourses(Node* head)
+{
     Node* temp = head;
     int k = 1;
-    if (temp == NULL) {
+    if (temp == NULL)
+    {
         printf("No courses available.\n");
         return;
     }
-    while (temp != NULL) {
+    while (temp != NULL)
+    {
         printf("%d.Course Code: %s\n", k, temp->course->courseCode);
         printf(" Course Title: %s\n", temp->course->courseTitle);
         printf(" Course Credits: %.1f\n\n", temp->course->credits);
@@ -51,10 +61,12 @@ void displayCourses(Node* head) {
 }
 
 // Function to remove a course from a list
-void removeCourse(Node** head, const char* code) {
+void removeCourse(Node** head, const char* code)
+{
     Node *temp = *head, *prev = NULL;
 
-    if (temp != NULL && strcmp(temp->course->courseCode, code) == 0) {
+    if (temp != NULL && strcmp(temp->course->courseCode, code) == 0)
+    {
         *head = temp->next;
         free(temp->course->courseCode);
         free(temp->course->courseTitle);
@@ -65,12 +77,14 @@ void removeCourse(Node** head, const char* code) {
         return;
     }
 
-    while (temp != NULL && strcmp(temp->course->courseCode, code) != 0) {
+    while (temp != NULL && strcmp(temp->course->courseCode, code) != 0)
+    {
         prev = temp;
         temp = temp->next;
     }
 
-    if (temp == NULL) {
+    if (temp == NULL)
+    {
         printf("Course with Code %s not found.\n", code);
         printf("Removal process failed.\n\n");
         return;

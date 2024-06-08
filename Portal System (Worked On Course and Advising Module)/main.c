@@ -1,6 +1,7 @@
 #include "advising.h"
 
-void main() {
+void main()
+{
     Node* availableCourses = NULL;
     StudentAdvising s = {NULL};
     StudentAdvising *limit;
@@ -11,7 +12,8 @@ void main() {
     char *title = (char*)malloc(50 * sizeof(char));
     char option;
 
-    while (1) {
+    while (1)
+    {
                 printf("*************************************************************\n");
                 printf("********************* Portal System *************************\n");
                 printf("*************************************************************\n\n");
@@ -22,7 +24,8 @@ void main() {
         scanf(" %c", &option);
 
         printf("\n_________________________________________________\n\n");
-        switch (option) {
+        switch (option)
+        {
             case 'A':
                 printf("*************************************************************\n");
                 printf("********************* Course Module *************************\n");
@@ -36,7 +39,8 @@ void main() {
                     printf("Enter your choice: ");
                     scanf("%d", &choice);
 
-                    switch (choice) {
+                    switch (choice)
+                    {
                         case 1:
                             printf("Enter Course Code: ");
                             scanf(" %[^\n]s", code);
@@ -155,7 +159,8 @@ void main() {
 
             case 'C':
                 printf("\n Quiting the program...\n");
-                while (availableCourses != NULL) {
+                while (availableCourses != NULL)
+                {
                     Node* temp = availableCourses;
                     availableCourses = availableCourses->next;
                     free(temp->course->courseCode);
@@ -164,7 +169,8 @@ void main() {
                     free(temp);
                 }
 
-                while (s.advisedCourses != NULL) {
+                while (s.advisedCourses != NULL)
+                {
                     Node* temp = s.advisedCourses;
                     s.advisedCourses = s.advisedCourses->next;
                     free(temp);
