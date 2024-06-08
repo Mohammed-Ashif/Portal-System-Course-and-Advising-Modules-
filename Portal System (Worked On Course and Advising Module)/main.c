@@ -12,6 +12,7 @@ void main()
     char *title = (char*)malloc(50 * sizeof(char));
     char option;
 
+    // Infinite Loop
     while (1)
     {
                 printf("*************************************************************\n");
